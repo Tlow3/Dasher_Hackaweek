@@ -1,3 +1,8 @@
+# Dasher Hackaweek
+
+This project uses the Pison SDK and specifically the Skeleton Project to get started and capture the IMU data from the device.
+
+
 # Pison JVM Skeleton Project
 
 You can change/add to this project as you see fit, but we recommend that you get it to build and run as-is before trying to make any changes. **This is still a work-in-progress on our end, and we want to make sure you don't waste time debugging _our_ issues!**
