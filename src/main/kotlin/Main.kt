@@ -64,10 +64,6 @@ fun main() {
     disposable.dispose()
 }
 
-fun onHold(hold: Int) {
-
-}
-
 val robot = Robot();
 var x = 0
 
@@ -101,17 +97,17 @@ fun dasherBack(){
     //set X value for mouse
     val d: Dimension = Toolkit.getDefaultToolkit().getScreenSize()
     val mousepointer = MouseInfo.getPointerInfo().getLocation();
-    robot.mouseMove(d.width / 2 - d.width/20, mousepointer.y);
+    robot.mouseMove(d.width / 2 - d.width/40, mousepointer.y);
 }
 
 fun onClick(click: Int) {
 
     if(click == 1){
-        when (x%4) {
+        when (x%3) {
             0 -> positionMouse()
             1 -> dasherSlow()
-            2 -> dasherFast()
-            3 -> dasherBack()
+            2 -> dasherBack()
+            //3 -> dasherBack()
         }
         x++
     }
@@ -127,7 +123,6 @@ fun isHold(hold: Int) {
 fun onAnglesChange(roll: Float) {
 
     val mousepointer = MouseInfo.getPointerInfo().getLocation();//val robot = Robot();
-    //robot.mouseMove(960, 540);
     robot.mouseMove(mousepointer.x, mousepointer.y - roll.toInt());
 
 }
